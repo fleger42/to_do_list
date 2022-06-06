@@ -12,8 +12,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.AppModule = void 0;
 const common_1 = require("@nestjs/common");
 const typeorm_1 = require("@nestjs/typeorm");
-const list_module_1 = require("./list/list.module");
-const list_entity_1 = require("./list/list.entity");
+const task_module_1 = require("./task/task.module");
+const task_entity_1 = require("./task/task.entity");
 const typeorm_2 = require("typeorm");
 let AppModule = class AppModule {
     constructor(dataSource) {
@@ -30,11 +30,11 @@ AppModule = __decorate([
                 username: 'postgres',
                 password: '123456',
                 database: 'task_managment',
-                entities: [list_entity_1.List],
+                entities: [task_entity_1.Task],
                 synchronize: true,
                 autoLoadEntities: true,
             }),
-            list_module_1.ListModule,
+            task_module_1.TaskModule,
         ],
     }),
     __metadata("design:paramtypes", [typeorm_2.DataSource])
