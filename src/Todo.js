@@ -27,7 +27,7 @@ function Todo(props) {
 					<button className='btn-green' onClick={deleteHandler}>Delete</button>
 					<button className='btn-green' onClick={deleteHandler}>Edit</button>
 				</div>
-				{modalIsOpen && <Modal />}
+				{modalIsOpen && <Modal removeFunction={ () => props.removeFunction(index)} closeModal={desactivateModal}/>}
 				{modalIsOpen && <Backdrop closeModal={desactivateModal}/>}
 	 		</div>
 		)
@@ -40,7 +40,7 @@ function Todo(props) {
 			  		<button className='btn-red' onClick={deleteHandler}>Delete</button>
 					<button className='btn-red' onClick={deleteHandler}>Edit</button>
 				</div>
-				{modalIsOpen && <Modal />}
+				{modalIsOpen && <Modal removeFunction={ () => props.removeFunction(index)} closeModal={desactivateModal}/>}
 				{modalIsOpen && <Backdrop closeModal={desactivateModal}/>}
 	 		</div>
 		)

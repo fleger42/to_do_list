@@ -5,10 +5,15 @@ import { Component } from 'react';
 class App extends Component {
 	state = {
 		all_task: [
-      	{
+			{
+				task_name: 'BRAin',
+				task_status: 'done',
+        		task_description: 'i have no brain',
+			},
+			{
 				task_name: 'Poop',
 				task_status: 'Ongoing',
-        task_description: 'There is something inside me',
+        		task_description: 'There is something inside me',
 			},
 		]
 	}
