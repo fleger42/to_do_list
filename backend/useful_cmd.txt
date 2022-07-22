@@ -1,0 +1,8 @@
+sudo lsof -i tcp:5432
+sudo docker ps
+sudo docker stop $(sudo docker ps -a -q)
+sudo docker-compose -f task-management-compose.yml up -d
+
+
+TO_ADD_MORE_WATCHER
+echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
